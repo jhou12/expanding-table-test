@@ -1,0 +1,56 @@
+
+/* EXPANDING TABLE */
+  
+.App {
+  display: flex;
+  position: relative;
+}
+
+.rootTest {
+  display: flex;
+  position: relative;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.rect {
+  width: 100px;
+  height: 200px;
+}
+
+.sq {
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  margin: 8px
+}
+
+.tableCont {
+  display: flex;
+  position: relative;
+}
+
+.table {
+  transition: all var(--timing) ease-in-out;
+  background: blue;
+}
+
+.container--filler {
+  width: var(--loc-w);
+  height: var(--loc-h);
+}
+
+.table--abs {
+  position: absolute;
+  top: var(--loc-y);
+  left: var(--loc-x);
+  width: var(--loc-w);
+  height: var(--loc-h);
+}
+
+
