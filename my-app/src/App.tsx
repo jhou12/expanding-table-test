@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { useRef } from 'react'
+import { Container } from '@material-ui/core';
 
 function App() {
   const mainRef: any = useRef()
@@ -24,7 +25,6 @@ function App() {
     cont.style.setProperty('--loc-h', h + 'px')
 
     if (ref.current?.classList.contains('table--abs')) {
-      console.log('containS --table--abs')
       t.style.setProperty('--loc-x', x + 8 + 'px')
       t.style.removeProperty('--loc-y')
       t.style.removeProperty('--loc-w')
@@ -33,7 +33,6 @@ function App() {
         ref.current.classList.remove('table--abs')
       }, 1000)
     } else {
-      console.log('does NOT contain --table--abs')
       cont.classList.add('container--filler')
 
       loc.current = {
