@@ -6,17 +6,16 @@ import { TablePlain } from './Table';
 
 function App() {
   const mainRef: any = useRef()
-  const colRef2: any = useRef()
   const colRef1: any = useRef()
-  const contRef: any = useRef()
-  const contRef0: any = useRef()
+  const colRef2: any = useRef()
+  const contRef1: any = useRef()
+  const contRef2: any = useRef()
   const contRef3: any = useRef()
   const contRef4: any = useRef()
-  const ref: any = useRef()
+  const ref1: any = useRef()
   const ref2: any = useRef()
   const ref3: any = useRef()
   const ref4: any = useRef()
-  const loc: any = useRef()
 
   const onClick = (tableRef: any, containerRef: any, columnRef: any) => {
     const cont: any = containerRef.current
@@ -44,12 +43,6 @@ function App() {
     } else {
       cont.classList.add('container--filler')
 
-      loc.current = {
-        x: t.offsetLeft,
-        y: t.offsetTop,
-        w: t.offsetWidth,
-        h: t.offsetHeight
-      }
       t.style.setProperty('--loc-x', t.offsetLeft + 'px')
       t.style.setProperty('--loc-y', t.offsetTop + 'px')
       t.style.setProperty('--loc-w', t.offsetWidth + 'px')
@@ -67,12 +60,12 @@ function App() {
   return (
     <div className="App" ref={mainRef}>
       <div className="col" ref={colRef1}>
-        <div className="container" ref={contRef4}><div className="table sq" ref={ref4} onClick={() => onClick(ref4, contRef4, colRef1)}><TablePlain /></div></div>
-        <div className="container" ref={contRef0}><div className="table rect" ref={ref2} onClick={() => onClick(ref2, contRef0, colRef1)}><TablePlain /></div></div>
+        <div className="container" ref={contRef1}><div className="table sq" ref={ref1} onClick={() => onClick(ref1, contRef1, colRef1)}><TablePlain /></div></div>
+        <div className="container" ref={contRef2}><div className="table rect" ref={ref2} onClick={() => onClick(ref2, contRef2, colRef1)}><TablePlain /></div></div>
       </div>
       <div className="col" ref={colRef2}>
         <div className="container" ref={contRef3}><div className="table rect" ref={ref3} onClick={() => onClick(ref3, contRef3, colRef2)}><TablePlain /></div></div>
-        <div className="container" ref={contRef}><div className="table sq" ref={ref} onClick={() => onClick(ref, contRef, colRef2)}><TablePlain /></div></div>
+        <div className="container" ref={contRef4}><div className="table sq" ref={ref4} onClick={() => onClick(ref4, contRef4, colRef2)}><TablePlain /></div></div>
       </div>
     </div>
   );

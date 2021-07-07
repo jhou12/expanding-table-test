@@ -1,10 +1,12 @@
-import { Paper, TableHead, TableRow, Typography, Table, TableBody } from "@material-ui/core"
-
+import { makeStyles, Paper, TableHead, TableRow, Typography, Table, TableBody } from "@material-ui/core"
+const useStyles = makeStyles(theme => ({
+}))
 export const TablePlain = () => {
+    const classes = useStyles()
     return (
         <Paper>
             <Typography>title</Typography>
-            <Table size="small">
+            <Table size="small" >
                 <TableHead>
                     <TableRow>header row</TableRow>
                 </TableHead>
