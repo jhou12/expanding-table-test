@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { useRef } from 'react'
 import { Container } from '@material-ui/core';
+import { TablePlain } from './Table';
 
 function App() {
   const mainRef: any = useRef()
@@ -46,7 +47,6 @@ function App() {
       t.style.setProperty('--loc-w', t.offsetWidth + 'px')
       t.style.setProperty('--loc-h', t.offsetHeight + 'px')
       t.classList.add('table--abs')
-      console.log('classlist test', t.classList)
       setTimeout(() => {
         t.style.setProperty('--timing', '1s')
         t.style.setProperty('--loc-x', 0 + 'px')
@@ -64,7 +64,7 @@ function App() {
       </div>
       <div className="col" ref={colRef}>
         <div className="container"><div className="table rect"></div></div>
-        <div className="container" ref={contRef}><div className="table sq" ref={ref} onClick={onClick}></div></div>
+        <div className="container" ref={contRef}><div className="table sq" ref={ref} onClick={onClick}><TablePlain /></div></div>
       </div>
     </div>
   );

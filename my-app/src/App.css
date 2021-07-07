@@ -4,7 +4,7 @@
 .App {
   display: flex;
   position: relative;
-  background: red;
+  background: pink;
 }
 
 .col {
@@ -33,7 +33,7 @@
 
 .table {
   transition: all var(--timing) ease-in-out;
-  background: blue;
+  background: lightskyblue;
 }
 
 .container--filler {
