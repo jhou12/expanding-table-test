@@ -4,11 +4,7 @@
 .App {
   display: flex;
   position: relative;
-}
-
-.rootTest {
-  display: flex;
-  position: relative;
+  background: red;
 }
 
 .col {

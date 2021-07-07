@@ -57,7 +57,7 @@ function App() {
     }
   }
   return (
-    <div className="App" style={{ background: 'red' }} ref={mainRef}>
+    <div className="App" ref={mainRef}>
       <div className="col">
         <div className="container"><div className="table sq"></div></div>
         <div className="container"><div className="table rect"></div></div>
