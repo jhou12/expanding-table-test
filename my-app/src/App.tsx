@@ -10,7 +10,6 @@ function App() {
   const loc: any = useRef()
 
   const onClick = (e: any) => {
-    console.log('test')
     const cont: any = contRef.current
     const col: any = colRef.current
     const t = ref.current
@@ -24,7 +23,8 @@ function App() {
     cont.style.setProperty('--loc-w', w + 'px')
     cont.style.setProperty('--loc-h', h + 'px')
 
-    if (ref.current?.classList.contains('--table--abs')) {
+    if (ref.current?.classList.contains('table--abs')) {
+      console.log('containS --table--abs')
       t.style.setProperty('--loc-x', x + 8 + 'px')
       t.style.removeProperty('--loc-y')
       t.style.removeProperty('--loc-w')
@@ -33,6 +33,7 @@ function App() {
         ref.current.classList.remove('table--abs')
       }, 1000)
     } else {
+      console.log('does NOT contain --table--abs')
       cont.classList.add('container--filler')
 
       loc.current = {
@@ -46,6 +47,7 @@ function App() {
       t.style.setProperty('--loc-w', t.offsetWidth + 'px')
       t.style.setProperty('--loc-h', t.offsetHeight + 'px')
       t.classList.add('table--abs')
+      console.log('classlist test', t.classList)
       setTimeout(() => {
         t.style.setProperty('--timing', '1s')
         t.style.setProperty('--loc-x', 0 + 'px')
@@ -63,7 +65,7 @@ function App() {
       </div>
       <div className="col" ref={colRef}>
         <div className="container"><div className="table rect"></div></div>
-        <div className="container"><div className="table sq" ref={ref} onClick={onClick}></div></div>
+        <div className="container" ref={contRef}><div className="table sq" ref={ref} onClick={onClick}></div></div>
       </div>
     </div>
   );
